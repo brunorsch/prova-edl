@@ -15,6 +15,7 @@ public class ListaCircular<T> {
             noAtual.setProximo(novoNo);
             novoNo.setAnterior(noAtual);
             novoNo.setProximo(this.head);
+            this.head.setAnterior(novoNo);
             return;
         }
 
@@ -24,6 +25,7 @@ public class ListaCircular<T> {
 
                 novoNo.setAnterior(noAtual);
                 novoNo.setProximo(this.head);
+                this.head.setAnterior(novoNo);
                 return;
             }
 

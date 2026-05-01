@@ -44,9 +44,14 @@ public class ListaDuplamenteEncadeada<T> {
                 var anterior = noAtual.getAnterior();
                 var proximo = noAtual.getProximo();
 
+                if(noAtual == this.head) { // Se for o inicio
+                    this.head = proximo;
+                    return;
+                }
+
                 anterior.setProximo(proximo);
 
-                if(proximo != null) {
+                if(proximo != null) { // Se for o final
                     proximo.setAnterior(anterior);
                 }
 

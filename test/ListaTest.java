@@ -111,12 +111,12 @@ private static class DeletarListaDuplamenteEncadeadaTeste implements Teste {
         listaDupla.inserirFinal("Ultimo");
 
         // Act
-        listaDupla.deletar(1);
+        listaDupla.deletar(0);
 
         // Assert
         listaDupla.mostrarLista();
         return printMock.getPrintCapturado()
-            .equals("[Inicio] <-> [Ultimo] -> null");
+            .equals("[Segundo] <-> [Ultimo] -> null");
     }
 }
 
